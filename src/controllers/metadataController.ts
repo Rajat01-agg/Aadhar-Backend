@@ -55,8 +55,8 @@ export const fetchDashboardFilters = async () => {
     years: years.map(y => y.year),
     months: months.map(m => m.month),
 
-    metricTypes: ["enrolment", "biometricUpdate", "demographicUpdate"],
-    ageGroups: ["0_5", "5_17", "18_PLUS"],
+    metricTypes: ["enrolment", "biometric_update", "demographic_update"],
+    ageGroups: ["age_0_5", "age_6_17", "age_18_plus"],
     indexTypes: [
       "demandPressureIndex",
       "operationalStressIndex",

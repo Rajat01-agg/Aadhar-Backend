@@ -1,6 +1,11 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
+(BigInt.prototype as any).toJSON = function () {
+  return this.toString();
+};
+
+
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
@@ -12,6 +17,7 @@ import metadataRoutes from './src/routes/metadataRoutes.ts';
 import dashboardRoutes from './src/routes/dashboardRoutes.ts';
 import heatmapRoutes from './src/routes/heatmapRoutes.ts';
 import analyticsRoutes from './src/routes/analyticsRoutes.ts';
+import alertsRoutes from './src/routes/alertsRoutes.ts';
 
 const app = express();
 const PORT = 5000;
@@ -26,6 +32,7 @@ app.use('/metadata', metadataRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/dashboard/heatmap', heatmapRoutes);
 app.use('/api/dashboard/analytics', analyticsRoutes);
+app.use('/api/dashboard/alerts', alertsRoutes);
 
 app.get('/', (req, res) => {
   res.json({ message: '🚀 API is running!' });

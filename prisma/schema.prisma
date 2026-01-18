@@ -71,8 +71,10 @@ enum FrameworkType {
 
 enum AlertType {
   anomaly
-  predictive_warning
-  framework_trigger
+  trend
+  pattern
+  accessibility_gap
+  operational_stress
 }
 
 enum AlertSeverity {

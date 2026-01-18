@@ -32,7 +32,9 @@ export const buildFilterQuery = (filters: any) => {
 export const resolveIndexColumn = (indexType: string) => {
   const map: any = {
     demandPressure: "demandPressureIndex",
+    // demand_pressure: "demandPressureIndex", // support for snake_case
     operationalStress: "operationalStressIndex",
+    // operational_stress: "operationalStressIndex", // support for snake_case
     updateAccessibilityGap: "updateAccessibilityGap",
     compositeRisk: "compositeRiskScore"
   };

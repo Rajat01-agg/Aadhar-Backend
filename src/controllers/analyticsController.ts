@@ -21,8 +21,8 @@ export const generateVisualData = async ({
     const where = buildFilterQuery(filters);
 
     const indexes = filters.indexes || [
-      "DEMAND_PRESSURE",
-      "OPERATIONAL_STRESS",
+      "demand_pressure",
+      "operational_stress",
     ];
 
     const rows = await prisma.derivedMetrics.groupBy({
@@ -37,7 +37,7 @@ export const generateVisualData = async ({
 
     const labels = rows.map(r => `${r.month}/${r.year}`);
 
-    const datasets = indexes.map(idx => {
+    const datasets = indexes.map((idx: string) => {
       const col = resolveIndexColumn(idx);
       return {
         label: idx.replace("_", " "),
@@ -84,28 +84,28 @@ export const generateVisualData = async ({
 };
 
 export const getVisualAnalytics = async (req: Request, res: Response) => {
-    const { chartType, context, filters } = req.body;
+  const { chartType, context, filters } = req.body;
 
-    if (!chartType || !context) {
-        return res.status(400).json({
-            success: false,
-            message: "chartType and context are required",
-        });
-    }
-
-    const chartData = await generateVisualData({
-        chartType,
-        context,
-        filters,
+  if (!chartType || !context) {
+    return res.status(400).json({
+      success: false,
+      message: "chartType and context are required",
     });
+  }
 
-    const preset = resolveChartPreset(context);
+  const chartData = await generateVisualData({
+    chartType,
+    context,
+    filters,
+  });
 
-    res.json({
-        success: true,
-        chartType,
-        context,
-        preset,
-        data: chartData,
-    });
+  const preset = resolveChartPreset(context);
+
+  res.json({
+    success: true,
+    chartType,
+    context,
+    preset,
+    data: chartData,
+  });
 };
