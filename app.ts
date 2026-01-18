@@ -18,6 +18,8 @@ import dashboardRoutes from './src/routes/dashboardRoutes.ts';
 import heatmapRoutes from './src/routes/heatmapRoutes.ts';
 import analyticsRoutes from './src/routes/analyticsRoutes.ts';
 import alertsRoutes from './src/routes/alertsRoutes.ts';
+import searchRoutes from './src/routes/searchRoutes.ts';
+import policyRoutes from "./src/routes/policyRoutes.ts";
 
 const app = express();
 const PORT = 5000;
@@ -30,9 +32,11 @@ app.use(passport.initialize());
 app.use('/auth', authRoutes);
 app.use('/metadata', metadataRoutes);
 app.use('/api/dashboard', dashboardRoutes);
-app.use('/api/dashboard/heatmap', heatmapRoutes);
-app.use('/api/dashboard/analytics', analyticsRoutes);
-app.use('/api/dashboard/alerts', alertsRoutes);
+app.use('/api/heatmap', heatmapRoutes);
+app.use('/api/analytics', analyticsRoutes);
+app.use('/api/alerts', alertsRoutes);
+app.use('/api/search', searchRoutes);
+app.use('/api/policy', policyRoutes);
 
 app.get('/', (req, res) => {
   res.json({ message: '🚀 API is running!' });
