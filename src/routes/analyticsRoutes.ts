@@ -16,4 +16,4 @@ router.post(
   wrapAsync(getVisualAnalytics)
 );
 
-export default router;
+export default router; 

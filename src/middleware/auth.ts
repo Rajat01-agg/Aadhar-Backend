@@ -5,7 +5,7 @@ import axios from 'axios';
 import { Redis } from 'ioredis';
 
 
-interface AuthRequest extends Request {
+export interface AuthRequest extends Request {
     user?: any;
 }
 

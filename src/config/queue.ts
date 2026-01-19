@@ -1,9 +1,10 @@
+// src/queues/queue.ts
 import { Queue } from 'bullmq';
 
-const connection = {
+export const connection = {
   url: process.env.REDIS_URL || 'redis://localhost:6379',
 };
 
-export const emailQueue = new Queue('email', { connection });
-
-export { connection };
+export const mlPipelineQueue = new Queue('ml-pipeline', {
+  connection,
+});

@@ -21,6 +21,7 @@ import alertsRoutes from './src/routes/alertsRoutes.ts';
 import searchRoutes from './src/routes/searchRoutes.ts';
 import policyRoutes from "./src/routes/policyRoutes.ts";
 import reportRoutes from "./src/routes/reportRoutes.ts";
+import syncRoutes from "./src/routes/syncRoutes.ts";
 
 const app = express();
 const PORT = 5000;
@@ -39,6 +40,7 @@ app.use('/api/alerts', alertsRoutes);
 app.use('/api/search', searchRoutes);
 app.use('/api/policy', policyRoutes);
 app.use('/api/reports', reportRoutes);
+app.use('/api/sync', syncRoutes);
 
 app.get('/', (req, res) => {
   res.json({ message: '🚀 API is running!' });

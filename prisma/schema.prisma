@@ -572,3 +572,14 @@ enum ReportItemType {
   accessibility_gap
   operational_stress
 }
+
+
+model MLJobRun {
+  id          BigInt   @id @default(autoincrement())
+  triggeredBy String
+  status      String   // queued | running | completed | failed
+  startedAt   DateTime?
+  completedAt DateTime?
+  error       String?
+  createdAt   DateTime @default(now())
+}

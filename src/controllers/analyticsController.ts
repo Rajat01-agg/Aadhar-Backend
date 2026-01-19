@@ -12,7 +12,7 @@ interface VisualRequest {
 
 export const generateVisualData = async ({
   chartType,
-  context,
+  context, 
   filters,
 }: VisualRequest) => {
 

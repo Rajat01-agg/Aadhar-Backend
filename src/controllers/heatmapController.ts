@@ -16,7 +16,7 @@ export const fetchHeatmapData = async (filters: any) => {
             where.year = latest.year;
             where.month = latest.month;
         }
-    }
+    } 
 
     // 🔹 STEP 2: Resolve index column
     const indexColumn = resolveIndexColumn(filters.indexType);
