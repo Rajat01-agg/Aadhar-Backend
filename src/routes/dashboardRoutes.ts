@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { authenticateJWT, requireMinimumRole, indiaOnlyAccess, apiRateLimiter } from "../middleware/auth.ts";
-import { getDashboardOverview, getStatesSummary, getDistrictsSummaryByState } from "../controllers/dashboardController.ts";
-import { wrapAsync } from "../utils/wrapAsync.ts";
+import { authenticateJWT, requireMinimumRole, indiaOnlyAccess, apiRateLimiter } from "../middleware/auth.js";
+import { getDashboardOverview, getStatesSummary, getDistrictsSummaryByState } from "../controllers/dashboardController.js";
+import { wrapAsync } from "../utils/wrapAsync.js";
 
 const router = Router();
 

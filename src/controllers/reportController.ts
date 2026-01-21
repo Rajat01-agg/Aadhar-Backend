@@ -2,8 +2,8 @@ import type { Request, Response } from 'express';
 import { PrismaClient, MetricCategory } from '@prisma/client';
 import fs from 'fs/promises';
 import path from 'path';
-import { PDFGenerator } from '../utils/generator.ts';
-import type { ReportGenerationData, ReportFindingData } from '../utils/generator.ts';
+import { PDFGenerator } from '../utils/generator.js';
+import type { ReportGenerationData, ReportFindingData } from '../utils/generator.js';
 
 const prisma = new PrismaClient();
 const pdfGenerator = new PDFGenerator();

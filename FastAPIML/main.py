@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from pipelines import run_all_pipelines
+from pipeline import run_all_pipelines
 
 app = FastAPI()
 

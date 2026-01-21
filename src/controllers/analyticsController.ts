@@ -1,12 +1,12 @@
 import type { Request, Response } from "express";
-import prisma from "../config/database.ts";
+import prisma from "../config/database.js";
 
 import {
   buildFilterQuery,
   resolveIndexColumn,
-} from "../utils/filterQueryBuilder.ts";
+} from "../utils/filterQueryBuilder.js";
 
-import { resolveChartPreset } from "../utils/chartPresetResolver.ts";
+import { resolveChartPreset } from "../utils/chartPresetResolver.js";
 
 interface VisualRequest {
   chartType: "line" | "bar" | "pie";

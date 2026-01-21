@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { showAlerts, showAlertSummary, markAlertAsReadController, markAlertAsResolvedController } from "../controllers/alertsController.ts";
-import { authenticateJWT, requireMinimumRole, indiaOnlyAccess, apiRateLimiter } from "../middleware/auth.ts";
-import { wrapAsync } from "../utils/wrapAsync.ts";
+import { showAlerts, showAlertSummary, markAlertAsReadController, markAlertAsResolvedController } from "../controllers/alertsController.js";
+import { authenticateJWT, requireMinimumRole, indiaOnlyAccess, apiRateLimiter } from "../middleware/auth.js";
+import { wrapAsync } from "../utils/wrapAsync.js";
 
 const router = Router();
 

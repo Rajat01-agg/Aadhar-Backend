@@ -17,6 +17,7 @@ src/generated/prisma/
 logs/
 .cache/
 *.log
+__pycache__/
 
 # OS & IDE
 .DS_Store

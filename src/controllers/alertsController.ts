@@ -1,7 +1,7 @@
-import prisma from "../config/database.ts";
+import prisma from "../config/database.js";
 import { AlertType, AlertSeverity } from "@prisma/client";
-import type { AlertFilters } from "../types/alertFilters.ts";
-import { buildAlertWhere } from "../utils/alertsQueryBuilder.ts";
+import type { AlertFilters } from "../types/alertFilters.js";
+import { buildAlertWhere } from "../utils/alertsQueryBuilder.js";
 import type { Request, Response } from "express";
 
 async function fetchAlerts(filters: AlertFilters) {

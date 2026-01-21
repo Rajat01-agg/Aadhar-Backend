@@ -1,6 +1,6 @@
 import passport from "passport";
 import pkg from "passport-google-oauth20";
-import prisma from "./database.ts";
+import prisma from "./database.js";
 
 const { Strategy: GoogleStrategy } = pkg;
 

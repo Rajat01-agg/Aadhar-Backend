@@ -1,4 +1,4 @@
-import prisma from "../config/database.ts";
+import prisma from "../config/database.js";
 import type { Request, Response } from "express";
 
 async function getPolicySuggestions(filters: any) {

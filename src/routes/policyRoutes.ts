@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { policyController, solutionFrameworkController } from "../controllers/policyController.ts";
-import { authenticateJWT, requireMinimumRole, indiaOnlyAccess, apiRateLimiter } from "../middleware/auth.ts";
-import { wrapAsync } from "../utils/wrapAsync.ts";
+import { policyController, solutionFrameworkController } from "../controllers/policyController.js";
+import { authenticateJWT, requireMinimumRole, indiaOnlyAccess, apiRateLimiter } from "../middleware/auth.js";
+import { wrapAsync } from "../utils/wrapAsync.js";
 
 const router = Router();
 

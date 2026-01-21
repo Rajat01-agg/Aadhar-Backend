@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import prisma from "../config/database.ts";
+import prisma from "../config/database.js";
 
 export const getDashboardFilters = async (
   req: Request,

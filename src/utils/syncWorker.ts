@@ -1,7 +1,7 @@
 // src/workers/mlPipeline.worker.ts
 import { Worker } from 'bullmq';
 import axios from 'axios';
-import { connection } from '../config/queue.ts';
+import { connection } from '../config/queue.js';
 
 new Worker(
   'ml-pipeline',

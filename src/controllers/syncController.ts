@@ -1,7 +1,7 @@
 // src/controllers/mlSync.controller.ts
-import { mlPipelineQueue } from '../config/queue.ts';
+import { mlPipelineQueue } from '../config/queue.js';
 import type { Request, Response } from 'express';
-import type { AuthRequest } from '../middleware/auth.ts';
+import type { AuthRequest } from '../middleware/auth.js';
 
 export const triggerMLSync = async (req: AuthRequest, res: Response) => {
     const { source = 'data.gov.in', force = false } = req.body;

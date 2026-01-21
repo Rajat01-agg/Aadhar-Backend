@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { searchController } from "../controllers/searchController.ts";
-import { authenticateJWT, requireMinimumRole, indiaOnlyAccess, apiRateLimiter } from "../middleware/auth.ts";
-import { wrapAsync } from "../utils/wrapAsync.ts";
+import { searchController } from "../controllers/searchController.js";
+import { authenticateJWT, requireMinimumRole, indiaOnlyAccess, apiRateLimiter } from "../middleware/auth.js";
+import { wrapAsync } from "../utils/wrapAsync.js";
 
 const router = Router();
 

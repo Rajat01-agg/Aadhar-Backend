@@ -1,5 +1,5 @@
 import { Prisma, AlertType, AlertSeverity } from "@prisma/client";
-import type { AlertFilters } from "../types/alertFilters.ts";
+import type { AlertFilters } from "../types/alertFilters.js";
 
 export function buildAlertWhere(filters: AlertFilters): Prisma.AlertsWhereInput {
     return {

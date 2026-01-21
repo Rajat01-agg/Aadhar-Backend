@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import passport from 'passport';
 import jwt from 'jsonwebtoken';
-import { authenticateJWT, indiaOnlyAccess, authRateLimiter, requireMinimumRole, apiRateLimiter } from '../middleware/auth.ts';
-import { wrapAsync } from '../utils/wrapAsync.ts';
+import { authenticateJWT, indiaOnlyAccess, authRateLimiter, requireMinimumRole, apiRateLimiter } from '../middleware/auth.js';
+import { wrapAsync } from '../utils/wrapAsync.js';
 
 const router = Router();
 

@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
-import prisma from "../config/database.ts";
-import { buildFilterQuery, resolveIndexColumn, getRiskLevel } from "../utils/filterQueryBuilder.ts";
+import prisma from "../config/database.js";
+import { buildFilterQuery, resolveIndexColumn, getRiskLevel } from "../utils/filterQueryBuilder.js";
 
 export const fetchHeatmapData = async (filters: any) => {
     const where: any = buildFilterQuery(filters);
